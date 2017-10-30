@@ -82,8 +82,6 @@ module.exports = function(grunt){
 	grunt.registerTask('default', ['sass', 'sync', 'include_file']);
 	grunt.registerTask('runCopy', ['copy']);
 	grunt.registerTask('runUglify', ['uglify']);
-
 	grunt.registerTask('dev', ['watch']);
 	grunt.registerTask('smush', ['imagemin']);
-
 };

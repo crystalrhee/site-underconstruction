@@ -17,6 +17,6 @@ node_modules
 node_modules/*
 source/css/sitewide.css.map
 */sitewide.css.map
-build/
-build/*
-build
+source/
+source/*
+source
