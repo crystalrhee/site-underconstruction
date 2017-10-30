@@ -1,0 +1,215 @@
+@import "_variables.scss"; // Include all variables for the site like fonts
+@import "_mixins.scss"; // Include the CSS mixins
+@import "_keyframes.scss"; // keyframe animations, only include if you'll be using keyframe animations
+
+main {
+
+}
+
+#wallpaper {
+	background: transparent;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	height: 100vh;
+	justify-content: flex-start;
+	position: relative;
+	@include mask-image(linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)));
+
+	height: 100vh;
+	overflow: hidden;
+
+	.bubble-container {
+		height: 100%;
+		left: 0px;
+		overflow: hidden;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		z-index: -1;
+
+		.bubbles {
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+
+			li {
+				background-color: $tertiary-dark;
+				bottom: 0;
+				box-sizing: border-box;
+				display: block;
+				height: 50px;
+				left: 0;
+				list-style: none;
+				opacity:0;
+				position: absolute;
+				width: 50px;
+				@include animation(square_spin 25s infinite linear);
+			}
+
+			li:nth-child(1) {
+				background:transparent;
+				border: 5px solid $tertiary-dark;
+				border-radius:50em;
+				height: 100px;
+				left: 10%;
+				width: 100px;
+				@include animation-delay(5s);
+			}
+
+			li:nth-child(2) {
+				height: 20px;
+				left: 10%;
+				width: 20px;
+				@include animation-delay(1s);
+			}
+
+			li:nth-child(3) {
+				height: 35px;
+				left: 0;
+				width: 35px;
+				@include animation-delay(14s);
+			}
+
+			li:nth-child(4) {
+				background:transparent;
+				border: 5px solid $tertiary-dark;
+				left: auto;
+				right: 10%;
+				@include animation-delay(8s);
+				@include animation-duration(15s);
+			}
+
+			li:nth-child(5) {
+				height: 70px;
+				left: auto;
+				right: 0%;
+				width: 70px;
+				@include animation-delay(12s);
+				@include animation-duration(15s);
+			}
+
+			li:nth-child(6) {
+				height: 100px;
+				left: 4%;
+				width: 100px;
+				@include animation-delay(20s);
+			}
+
+			li:nth-child(7) {
+				background:transparent;
+				border: 5px solid $tertiary-dark;
+				border-radius:50em;
+				height: 50px;
+				left: 23%;
+				width: 50px;
+				@include animation-duration(15s);
+			}
+			li:nth-child(8) {
+				left: 22%;
+				@include animation-delay(17s);
+				@include animation-duration(31s);
+			}
+			li:nth-child(9) {
+				height: 20px;
+				left: auto;
+				right: 44%;
+				width: 20px;
+				@include animation-delay(1s);
+				@include animation-duration(25s);
+			}
+			li:nth-child(10) {
+				background:transparent;
+				border: 5px solid $tertiary-dark;
+				border-radius:50em;
+				left: auto;
+				right: 16%;
+				@include animation-delay(11s);
+				@include animation-duration(18s);
+			}
+
+			li:nth-child(11) {
+				height: 30px;
+				left: 53%;
+				width: 30px;
+				@include animation-delay(29s);
+			}
+
+			li:nth-child(12) {
+				background:transparent;
+				border: 5px solid $tertiary-dark;
+				left: 30%;
+				@include animation-delay(21s);
+			}
+
+			li:nth-child(13) {
+				background:transparent;
+				border: 5px solid $tertiary-dark;
+				border-radius:50em;
+				height: 35px;
+				left: auto;
+				right: 51%;
+				width: 35px;
+				@include animation-delay(2s);
+				@include animation-duration(35s);
+			}
+			li:nth-child(14) {
+				height: 100px;
+				left: auto;
+				right: 31%;
+				width: 100px;
+				@include animation-delay(10s);
+				@include animation-duration(19s);
+			}
+			li:nth-child(15) {
+				height: 20px;
+				left: auto;
+				right: 24%;
+				width: 20px;
+				@include animation-delay(6s);
+				@include animation-duration(24s);
+			}
+		}
+	}
+}
+
+#about {
+	h2 {
+		text-align: center;
+	}
+}
+
+.title {
+	min-height: 100vh;
+}
+
+.grad {
+	height: 100vh;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		font-family: 'Montserrat', sans-serif;
+		color: white;
+		font-size: 42px;
+		text-align: center;
+		line-height: 1.56;
+		text-shadow: 0px 1px 2px rgba(62,57,107,0.4);
+	}
+}
+
+.grad {
+	background-size: 200%;
+	background-image: linear-gradient(to bottom left, $primary 0%, $secondary 50%, $tertiary 100%);
+	transition: 600ms ease;
+
+	&:hover {
+		background-position: 100% 0;
+	}
+}

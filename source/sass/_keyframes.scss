@@ -1,0 +1,37 @@
+@import "_mixins.scss"; // Include the CSS mixins
+
+
+@include keyframes(bump_left) {
+	50% {
+		left: 0;
+	}
+}
+@include keyframes(bump_right) {
+	50% {
+		right: 0;
+	}
+}
+
+@include keyframes(spin) {
+	to {
+		@include transform(rotate(0deg));
+	}
+	from {
+		@include transform(rotate(360deg));
+	}
+}
+
+@include keyframes(square_spin) {
+	0% {
+		@include transform(translateY(0));
+		opacity:0;
+	}
+	50% {
+		opacity:1;
+	}
+	100% {
+		@include transform(translateY(-1000px) rotate(600deg));
+		opacity: .8;
+	}
+}
+

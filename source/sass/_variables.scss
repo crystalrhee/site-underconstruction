@@ -1,0 +1,35 @@
+/* Variables
+=============================================*/
+$primary: #cbe4eb; // light blue
+$primary-dark: #92ccd8; // blue
+$secondary: #f86cb4; // pink
+$secondary-dark: #f37366; // red
+$tertiary: #dfc197; // light brown
+$tertiary-dark: #6e6f75; // dark gray
+
+// logo colors
+// pink #fbe3da
+// yellow #feefac
+
+$bodyFont: 'montserratregular', 'Arial', sans-serif;
+$Futura: 500 15px/18px 'JB Futura', 'Futura', 'Arial', sans-serif; // for full font declaration
+$FuturaStack: 'Futura', 'Arial', sans-serif; // for when you just need the font stack
+
+$MontLight: 'montserratregular', 'Arial', sans-serif;
+$MontRegular: 'montserrat_light', 'Arial', sans-serif;
+$MontBlack: 'montserratblack', 'Arial', sans-serif;
+$MontBold: 'montserratbold', 'Arial', sans-serif;
+
+$MontLightFull: normal 16px/20px $MontLight;
+$MontRegularFull: normal 16px/20px $MontRegular;
+$MontBlackFull: normal 16px/20px $MontBlack;
+$MontBoldFull: normal 16px/20px $MontBold;
+
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$tablet-width: 768px;
+$tablet-mid-width: 800px;
+$desktop-width: 1024px;
+$super-desktop-width: 1400px;
+$mobile-width: 680px;
+$small-mobile-width: 375px;
