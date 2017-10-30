@@ -1,5 +1,5 @@
 # Personal Website
-**Site**: [http://sitename.com] 
+**Site**: [https://crystalrhee.github.io/crystalrhee/build/] 
 
 Crystal Rhee's Personal Website
 
