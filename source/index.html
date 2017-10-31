@@ -7,21 +7,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Website</title>
 
-	<link rel="icon" type="image/x-icon" href="img/logo/logo.ico" />
+	<link rel="icon" type="image/x-icon" href="img/logo/card.ico" />
 	<link rel="stylesheet" href="css/sitewide.css"/>
 
 	<!--[if IE]><![endif]-->
 	<!--[if lte IE 9]>
-		<script src="js/libs/html5-shiv.js"></script>
+	<script src="js/libs/html5-shiv.js"></script>
 	<![endif]-->
-
 	<!-- include partials/meta.html -->
 
 </head>
-<body>
+<body class="home">
 	<!-- include partials/header.html -->
 	<main>
-		<section id="wallpaper">
+		<section class="wallpaper">
 			<div class="bubble-container">
 				<ul class="bubbles">
 					<li></li>
@@ -43,16 +42,31 @@
 			</div>
 		</section>
 		<section id="about">
-			<h2>This page is under construction ゜・．（ｉДｉ）｡：ﾟ</h2>
+			<div class="inner row">
+				<div class="content card">
+					<p>Hi, I'm a developer from <span>Boston</span>. I am skilled in <span>HTML/HTML5</span>, <span>CSS/CSS3</span>, <span>JavaScript/jQuery</span> and <span>CMS integration</span>. I spent the past six months with <span>MullenLowe</span> as a <span>Development Co-op</span>.</p>
+				</div>
+				<div class="circular-container card">
+					<img src="img/profile.png" alt="Profile picture">
+				</div>
+				<div class="content card">
+					<span>Name:</span> 
+					<p>Crystal Rhee</p>
+					<span>Education:</span>
+					<p>Northeastern University</p>
+					<span>Major:</span>
+					<p>Candidate for a B.S. in Computer Science &amp; Finance, 2020</p>
+				</div>
+			</div>
+		</section>
+		<section id="experience">
 		</section>
 		<section id="resume">
-			
+
 		</section>
 		<section id="contact">
-			
-		</section>
 
-		
+		</section>
 	</main>
 
 	<!-- include partials/footer.html -->

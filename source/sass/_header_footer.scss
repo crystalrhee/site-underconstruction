@@ -16,6 +16,16 @@ header {
 		top: 50%;
 		width: 300px;
 		@include transform(translate(0%, -50%));
+
+		@include mobile {
+			left: 0;
+			margin: 0 auto;
+			padding-top: 20px;
+			position: relative;
+			width: 30%;
+
+			@include transform(none);
+		}
 	}
 
 	.name {
@@ -25,16 +35,25 @@ header {
 		position: absolute;
 		text-transform: uppercase;
 		top: 50%;
+		@include transform(translate(0, -50%));
+
+		@include mobile {
+			left: 0;
+			position: relative;
+			top: 0;
+			@include transform(none);
+		}
 
 		h2 {
 			font: $MontRegularFull;
 			font-size: 2.5em;
+			line-height: 2.8em;
 		}
 
 		
 		h1 {
-			font:$MontBoldFull;
-			font-size: 3em;
+			font:$QuickPenFull;
+			font-size: 2.5em;
 			line-height: 2em;
 
 			&:hover {
@@ -49,6 +68,14 @@ header {
 		display: flex;
 		position: absolute;
 		right: 0;
+
+		@include tablet {
+			display: none;
+		}
+
+		@include mobile {
+			display: none;
+		}
 	}
 
 	.fixed {
@@ -60,11 +87,52 @@ header {
 			color: $tertiary-dark;
 		}
 	}
+
+	&.open {
+		a.menu {
+			display: none;
+		}
+		ul {
+			// background-color: $secondary-dark;
+			// opacity: 0.4;
+
+			@include tablet {
+				display: block;
+			}
+
+			@include mobile {
+				display: block;
+			}
+
+			li {
+				margin: 20px 0;
+			}
+		}
+	}
+
+	a.menu {
+		bottom: 0;
+		display: none;
+		position: absolute;
+		right: 0;
+
+		@include tablet {
+			display: block;
+		}
+
+		@include mobile {
+			display: block;
+		}
+	}
 }
 
 header, footer {
 	display: flex;
 	position: relative;
+
+	@include mobile {
+		display: block;
+	}
 }
 
 footer {

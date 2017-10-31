@@ -6,7 +6,7 @@ main {
 
 }
 
-#wallpaper {
+.wallpaper {
 	background: transparent;
 	color: white;
 	display: flex;
@@ -14,7 +14,7 @@ main {
 	flex-wrap: nowrap;
 	height: 100vh;
 	justify-content: flex-start;
-	position: relative;
+	position: absolute;
 	@include mask-image(linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0)));
 
 	height: 100vh;
@@ -178,13 +178,39 @@ main {
 }
 
 #about {
-	h2 {
-		text-align: center;
-	}
-}
-
-.title {
+	// background-image: url('../img/wallpaper-back.jpg');
 	min-height: 100vh;
+	position: relative;
+
+	.inner {
+		border: 5px solid $secondary-dark;
+
+		.circular-container {
+			height: 250px;
+			width: 250px;
+
+			img {
+				border: 5px solid $secondary-dark;
+				border-radius: 50%;
+				overflow:hidden;
+			}
+		}
+	}
+
+	.row {
+		margin: 50px auto;
+
+		.card {
+			flex: 1;
+			margin: 0 20px;
+			text-align: left;
+
+			span {
+				color: $secondary-dark;
+				font-family: $MontBold;
+			}
+		}
+	}
 }
 
 .grad {

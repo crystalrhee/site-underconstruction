@@ -7,14 +7,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<title>Website</title>
 
-	<link rel="icon" type="image/x-icon" href="img/logo/logo.ico" />
+	<link rel="icon" type="image/x-icon" href="img/logo/card.ico" />
 	<link rel="stylesheet" href="css/sitewide.css"/>
 
 	<!--[if IE]><![endif]-->
 	<!--[if lte IE 9]>
-		<script src="js/libs/html5-shiv.js"></script>
+	<script src="js/libs/html5-shiv.js"></script>
 	<![endif]-->
-
 	<!-- Google Tag Manager -->
 <script>
 	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -27,27 +26,25 @@
 <!-- End Google Tag Manager -->
 
 </head>
-<body>
+<body class="home">
 	<header>
-	<!-- <a href="#" class="menu"><span>menu</span></a> -->
 	<img src="img/logo/card-blue.png" alt="Logo" class="logo" />
 	<div class="name">
-		<h2>Hi, I'm</h2>
-		<h1>[ Crystal Rhee ]</h1>
+		<h2>My name is</h2>
+		<h1>Crystal Rhee</h1>
+		<h2>Welcome</h2>
 	</div>
+	<a href="#" class="menu"><span>menu</span></a>
 	<ul class="nav-links">
-		<li><a href="index.html#!/scroll/section" class="scroll">About</a></li>
-		<li><a href="index.html#!/scroll/section" class="scroll">Skills</a></li>
-		<li><a href="index.html#!/scroll/section" class="scroll">Experience</a></li>
-		<li><a href="index.html#!/scroll/section" class="scroll">Resume</a></li>
-		<li class="modal-link"><a href="#!/modal/more">Contact</a></li>
-		
-		<!-- <li class="social instagram"><a href="https://www.instagram.com/" target="_blank">Instagram</a></li> -->
-		<!-- <li class="social github"><a href="https://www.github.com/" target="_blank">Github</a></li> -->
+		<li><a href="index.html#!/scroll/about" class="scroll">About</a></li>
+		<li><a href="index.html#!/scroll/experience" class="scroll">Experience</a></li>
+		<li><a href="index.html#!/scroll/resume" class="scroll">Resume</a></li>
+		<li class="modal-link"><a href="#!/modal/github" class="scroll">Github</a></li>
+		<li class="modal-link"><a href="#!/modal/contact">Contact</a></li>
 	</ul>
 </header>
 	<main>
-		<section id="wallpaper">
+		<section class="wallpaper">
 			<div class="bubble-container">
 				<ul class="bubbles">
 					<li></li>
@@ -69,16 +66,31 @@
 			</div>
 		</section>
 		<section id="about">
-			<h2>This page is under construction ゜・．（ｉДｉ）｡：ﾟ</h2>
+			<div class="inner row">
+				<div class="content card">
+					<p>Hi, I'm a developer from <span>Boston</span>. I am skilled in <span>HTML/HTML5</span>, <span>CSS/CSS3</span>, <span>JavaScript/jQuery</span> and <span>CMS integration</span>. I spent the past six months with <span>MullenLowe</span> as a <span>Development Co-op</span>.</p>
+				</div>
+				<div class="circular-container card">
+					<img src="img/profile.png" alt="Profile picture">
+				</div>
+				<div class="content card">
+					<span>Name:</span> 
+					<p>Crystal Rhee</p>
+					<span>Education:</span>
+					<p>Northeastern University</p>
+					<span>Major:</span>
+					<p>Candidate for a B.S. in Computer Science &amp; Finance, 2020</p>
+				</div>
+			</div>
+		</section>
+		<section id="experience">
 		</section>
 		<section id="resume">
-			
+
 		</section>
 		<section id="contact">
-			
-		</section>
 
-		
+		</section>
 	</main>
 
 	<footer>
