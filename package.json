@@ -1,0 +1,25 @@
+{
+	"name": "untitled",
+	"version": "1.0.0",
+	"description": "website",
+	"main": "app.js",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"devDependencies": {
+		"grunt": "^1.0.1",
+		"grunt-contrib-concat": "^1.0.1",
+		"grunt-contrib-copy": "^1.0.0",
+		"grunt-contrib-imagemin": "^2.0.1",
+		"grunt-contrib-jshint": "^1.1.0",
+		"grunt-contrib-sass": "^1.0.0",
+		"grunt-contrib-uglify": "^3.1.0",
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-include-file": "^0.1.3",
+		"grunt-sync": "^0.7.0",
+		"load-grunt-tasks": "^3.5.2"
+	},
+	"author": "crystal-rhee",
+	"license": "ISC"
+}

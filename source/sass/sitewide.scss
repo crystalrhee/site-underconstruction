@@ -1,0 +1,41 @@
+@import "_variables.scss"; // Include all variables for the site like fonts
+@import "_mixins.scss"; // Include the CSS mixins
+@import "_reset.scss"; // Include the general HTML reset
+@import "_keyframes.scss"; // keyframe animations, only include if you'll be using keyframe animations
+
+/* Put all your main styles below here */
+/* When making styles, make sure to keep in mind a mobile-first mentality. 
+All your main code here should work 100% on mobile. 
+Your media queries should be for upscaling from a mobile size.*/
+
+/* Use the media queries mixins as inline media queries instead of giant media query chunks, like this:*/
+
+/*
+Include any other files split out by section here
+*/
+iframe {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+
+body{
+	background: $primary;
+	color: $secondary;	
+}
+
+
+@import "_page_home.scss"; // styles specific to homepage
+@import "_header_footer.scss"; // styles for global footer
+@import "_general.scss"; // general styles reused in multiple places
+@import "_modals.scss"; // styles specific to the popup modals
+

@@ -1,0 +1,171 @@
+@import "_variables.scss"; // Include all variables for the site like fonts
+
+section {
+	margin: 10% auto;
+	width: 80%;
+	position: relative;
+
+	@include mobile {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.inner {
+	text-align: center;
+}
+
+.circular-container {
+	position: relative;
+
+	img {
+		display: inline;
+		margin: 0 auto;
+		height: 100%;
+		width: auto;
+	}
+}
+
+button.button, a.button {
+	background-color: $primary;
+	color: $secondary;
+	font: $MontBlackFull;
+
+	&:hover {
+	}
+}
+
+a, button {
+	border: 0;
+	color: $secondary;
+	font: $MontBlackFull;
+	margin: 1em;
+	padding: 1em 2em;
+	position: relative;
+	vertical-align: bottom;
+	@include box-sizing(border-box);
+
+	@include tablet {
+		padding: 0;
+	}
+
+	@include mobile {
+		padding: 0;
+	}
+
+	&:before, &:after {
+		border: 2px solid transparent;
+		width: 0;
+		height: 0;
+		box-sizing: inherit;
+		content: '';
+		position: absolute;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+	}
+
+	&:after {
+		bottom: 0;
+		right: 0;
+	}
+
+	&:hover, &.active {
+		color: $secondary;
+		@include transition(color .5s);
+
+		&:before, &:after {
+			width: 100%;
+			height: 100%;
+			@include tablet {
+				display: none;
+			}
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&:before {
+			border-top-color: $secondary;
+			border-right-color: $secondary;
+			@include transition(width 0.25s ease-out, height 0.25s ease-out 0.25s);
+		}
+
+		&:after {
+			border-bottom-color: $secondary;
+			border-left-color: $secondary;
+			@include transition(border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s);
+		}
+	}
+}
+
+.spinner {
+
+}
+
+.map {
+	margin: 0 auto;
+	padding: 30px 25px;
+	vertical-align: top;
+	width: 45%;
+	@include transition(all .25s ease);
+
+	i {
+		color: $tertiary;
+		height: 50px;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		vertical-align: middle;
+		width: 50px;
+		@include transition(all .25s ease);
+	}
+
+	&:hover {
+		h3 {
+
+			letter-spacing: 1.6px;
+		}
+		i {
+			@include transform(scale(1.2));
+		}
+	}
+
+	ul {
+		li {
+			margin: 0;
+			padding: 2em 3em;
+			position: relative;
+			border-left: 2px solid $tertiary;
+
+			&::before {
+				content: attr(date-is);
+				display: block;
+				font-size: .86rem;
+				left: 1em;
+				position: absolute;
+				top: 0;
+			}
+
+			&::after {
+				background: $primary;
+				border: 2px solid $tertiary;
+				border-radius: 50%;
+				content: '';
+				display: block;
+				height: 10px;
+				left: -8px;
+				position: absolute;
+				top: 0;
+				width: 10px;
+			}
+
+			&:last-child {
+				border-image: linear-gradient(to bottom, $tertiary 60%, rgba($tertiary, 0)) 1 100%;
+			}
+		}
+	}
+}
+

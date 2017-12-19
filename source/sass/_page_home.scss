@@ -1,0 +1,100 @@
+@import "_variables.scss"; // Include all variables for the site like fonts
+@import "_mixins.scss"; // Include the CSS mixins
+@import "_keyframes.scss"; // keyframe animations, only include if you'll be using keyframe animations
+
+main {
+
+}
+
+#about {
+	
+}
+
+#experience {
+	.work, .education {
+		display: inline-block;
+
+		small {
+			display: block;
+			opacity: .7;
+		}
+	}
+}
+
+#projects {
+	.card {
+		background-color: #141414;
+		color: white;
+		display: inline-block;
+		line-height: 1.5em;
+		margin: 10px 1%;
+		max-width: 315px;
+		min-width: 230px;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		width: 100%;
+		
+		@include box-sizing(border-box);
+		@include transition(all .25s ease);
+
+		.card-background {
+			vertical-align: top;
+			opacity: 0.2;
+			width: 100%;
+			@include filter(grayscale(100%) blur(5px));
+			@include transition(all 2s ease);
+			filter: grayscale(50%) blur(5px);
+
+			&:hover {
+				@include transform(scale(1.2));
+			}
+		}
+
+		.card-profile {
+			border: 2px solid $tertiary;
+			border-radius: 50%;
+			bottom: 50%;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+			left: 50%;
+			opacity: 1;
+			position: absolute;
+			width: 100px;
+			@include transform(translate(-50%, 0));
+		}
+
+		.card-caption {
+			left: 0;
+			padding: 19px 20px;
+			position: absolute;
+			top: 50%;
+			width: 100%;
+
+			h3 {
+				font-size: 25px;
+				font-weight: 400;
+
+				span {
+					display: block;
+					font-size: 0.5em;
+					color: $tertiary;
+					opacity: 0.75;
+				}
+			}
+
+			i {
+				padding: 10px 5px;
+				display: inline-block;
+				font-size: 32px;
+				color: #ffffff;
+				text-align: center;
+				opacity: 0.65;
+			}
+		}
+	}
+
+}
+
+#contacts {
+	
+}
