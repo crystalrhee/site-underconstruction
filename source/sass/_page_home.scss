@@ -3,7 +3,7 @@
 @import "_keyframes.scss"; // keyframe animations, only include if you'll be using keyframe animations
 
 main {
-
+	
 }
 
 #about {
@@ -89,7 +89,6 @@ main {
 					opacity: 0.75;
 				}
 			}
-
 			i {
 				padding: 10px 5px;
 				display: inline-block;
@@ -97,6 +96,10 @@ main {
 				color: #ffffff;
 				text-align: center;
 				opacity: 0.65;
+			}
+			p {
+				font-size: 14px;
+				line-height: 22px;
 			}
 		}
 	}

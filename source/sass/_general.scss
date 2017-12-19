@@ -11,6 +11,10 @@ section {
 	}
 }
 
+.show {
+	opacity: 1 !important;
+}
+
 .inner {
 	text-align: center;
 }
@@ -30,8 +34,32 @@ button.button, a.button {
 	background-color: $primary;
 	color: $secondary;
 	font: $MontBlackFull;
+}
 
-	&:hover {
+.speech-bubble {
+	background: $secondary;
+	border-radius: .4em;
+	color: $primary;
+	opacity: 0;
+	padding: 15px;
+	position: absolute;
+	right: 50%;
+	top: -65px;
+	transform: translate(50%, 0%);
+	@include transition(all 1s ease);
+
+	&:after {
+		border: 15px solid transparent;
+		border-top-color: $secondary;
+		border-bottom: 0;
+		bottom: 0;
+		content: '';
+		height: 0;
+		left: 50%;
+		margin-left: -15px;
+		margin-bottom: -15px;
+		width: 0;
+		position: absolute;
 	}
 }
 

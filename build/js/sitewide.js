@@ -50,6 +50,13 @@ var SITE = {
 			function () {$(this).addClass('animate');}, 
 			function () {$(this).removeClass('animate');});
 
+		$(".contact-icon").mouseover(function(){
+			$(this).children(".speech-bubble").addClass("show");
+		});
+		$(".contact-icon").mouseout(function(){
+			$(this).children(".speech-bubble").removeClass("show");
+		});
+
 	},
 
 	functions: {
