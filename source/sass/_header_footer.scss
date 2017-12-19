@@ -15,7 +15,18 @@ header {
 		width: 100%;
 	}
 
-	#video-background {
+	#backgroundImage {
+		background: url("../img/video-image.jpg") center center;
+		background-size: cover;
+		bottom: 0;
+		height: 100vh;
+		position: absolute;
+		right: 0;
+		width: 100%; 
+		z-index: -100;
+	}
+
+	#backgroundVideo {
 		position: absolute;
 		right: 0; 
 		bottom: 0;
