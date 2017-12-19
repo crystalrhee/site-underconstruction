@@ -60,6 +60,7 @@ header {
 		display: flex;
 		position: absolute;
 		right: 0;
+		@include transition(opacity .5s ease);
 
 		@include tablet {
 			display: none;
@@ -67,6 +68,10 @@ header {
 
 		@include mobile {
 			display: none;
+		}
+
+		&:not(:hover) {
+			opacity: 0.4;
 		}
 	}
 

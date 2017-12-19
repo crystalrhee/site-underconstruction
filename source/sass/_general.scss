@@ -37,7 +37,7 @@ button.button, a.button {
 
 a, button {
 	border: 0;
-	color: $secondary;
+	color: $tertiary;
 	font: $MontBlackFull;
 	margin: 1em;
 	padding: 1em 2em;
@@ -73,7 +73,7 @@ a, button {
 	}
 
 	&:hover, &.active {
-		color: $secondary;
+		color: $tertiary;
 		@include transition(color .5s);
 
 		&:before, &:after {
@@ -88,21 +88,17 @@ a, button {
 		}
 
 		&:before {
-			border-top-color: $secondary;
-			border-right-color: $secondary;
+			border-top-color: $tertiary;
+			border-right-color: $tertiary;
 			@include transition(width 0.25s ease-out, height 0.25s ease-out 0.25s);
 		}
 
 		&:after {
-			border-bottom-color: $secondary;
-			border-left-color: $secondary;
+			border-bottom-color: $tertiary;
+			border-left-color: $tertiary;
 			@include transition(border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s);
 		}
 	}
-}
-
-.spinner {
-
 }
 
 .map {
@@ -113,6 +109,7 @@ a, button {
 	@include transition(all .3s ease);
 
 	h3 {
+		margin: 15px 0;
 		@include transition(all .3s ease);
 	}
 
@@ -140,18 +137,19 @@ a, button {
 		text-align: left;
 		
 		li {
+			border-left: 2px solid $tertiary;
 			margin: 0;
 			padding: 2em 3em;
 			position: relative;
-			border-left: 2px solid $tertiary;
 
 			&::before {
 				content: attr(date-is);
 				display: block;
-				font-size: .86rem;
+				font-size: .76rem;
 				left: 1em;
 				position: absolute;
 				top: 0;
+				@include transition(all .5s ease);
 			}
 
 			&::after {
@@ -165,10 +163,25 @@ a, button {
 				position: absolute;
 				top: 0;
 				width: 10px;
+				@include transition(all .5s ease);
 			}
 
 			&:last-child {
 				border-image: linear-gradient(to bottom, $tertiary 60%, rgba($tertiary, 0)) 1 100%;
+			}
+
+			span {
+				font-size: 1.46em;
+			}
+		}
+
+		li.animate {
+			&::after {
+				height: 14px;
+				left: -10px;
+				top: -2px;
+				width: 14px;
+				@include animation(pulse 1.5s infinite ease-in-out);
 			}
 		}
 	}

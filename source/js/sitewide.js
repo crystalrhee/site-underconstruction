@@ -45,6 +45,11 @@ var SITE = {
 				}
 			}, 200);
 		});
+
+		$('.map ul li').hover(
+			function () {$(this).addClass('animate');}, 
+			function () {$(this).removeClass('animate');});
+
 	},
 
 	functions: {
